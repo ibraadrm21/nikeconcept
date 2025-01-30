@@ -1,0 +1,54 @@
+body {
+    min-height: 150vh;
+    margin: 0;
+    padding: 0;
+  }
+
+.shoebox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 350px;
+    margin-top: 40px;
+    margin-left: 100px;
+    scale: 1.5;;
+    outline: 2px solid #000000 ;
+  }
+  
+  .shoebox .main-image {
+    width: 100%;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+  }
+  
+  .shoebox .main-image img {
+    width: 100%;
+    display: block;
+  }
+  
+  .shoebox .thumbnails {
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+    padding-bottom: 10px;
+  }
+  
+  .shoebox .thumbnails img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border: 1px solid lightgray;
+    cursor: pointer;
+    transition: transform 0.2s;
+  }
+  
+  .shoebox .thumbnails img:hover {
+    transform: scale(1.1);
+    border-color: darkgrey;
+  }
+
+  .shoeSel{
+    text-align: center top;
+
+  }
+  
