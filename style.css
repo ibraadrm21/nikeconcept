@@ -1,0 +1,230 @@
+body {
+    color: #000000;
+    font-family: Arial;
+    background: #ffffff;
+}
+
+.navbar {
+    display: block;
+    text-align: center;
+    width: 30%;
+    margin: 0 auto;
+    padding: 8px 8px;
+    border-radius: 9999999px;
+    background: #000000;
+    box-shadow: 2px 3px #cccccc;
+    border: 0.5px solid #cacaca; 
+    font-size: 30px;
+}
+
+.navbar button {
+    color: #ffffff;
+    border-radius: 8px;
+    border-color: transparent;
+    background-color: transparent;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+    margin: 0 5px;
+}
+
+.navbar button:hover {
+    background-color: transparent;
+    color: white;
+    transform: scale(1.05);
+    border-radius: 12px; 
+    border-width: 0.3px;
+    border-color: white; 
+}
+
+.navbar button a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.af1 {
+    font-size: 75px;
+    text-align: center;
+    position: relative;
+    top: 0px;
+}
+
+.af1p {
+    display: block;
+    margin: 0 auto;
+    filter: brightness(1.0);
+    transition: filter 0.3s ease, transform 0.3s ease;
+    margin-top: 150px; 
+    width: 150px;  
+    height: auto;
+    transform: scale(5); 
+}
+
+.af1p:hover {
+    transform: scale(5.8);
+    cursor: pointer;
+    filter: brightness(1.01);
+}
+
+.buy {
+    text-align: center;
+    margin-top: 170px; 
+}
+
+.buy-button {
+    color: #ffffff;
+    border-radius: 8px;
+    border-color: transparent;
+    background-color: black;
+    padding: 10px 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+    margin: 0 5px;
+    font-size: 25px;
+    font-weight: bold;
+    overflow: hidden;
+    outline: 0 none;
+}
+
+.buy-button:hover {
+    background-color: white;
+    transform: scale(1.05); 
+    color: black;
+    border-color: black;
+    transition: shine 2s ease infinite;
+}
+
+.desc{
+    display: block;
+    margin: 0 auto;
+    text-align: justify;
+    width: 70%;
+}
+
+.af1ttl{
+    text-align: center; 
+}
+
+/* From Uiverse.io by H_K_MENON */ 
+/* this is the code  */
+.button {
+    text-align: center;
+    position: relative;
+    transition: all 0.3s ease-in-out;
+    padding-block: 0.5rem;
+    padding-inline: 1.25rem;
+    background-color: rgb(0, 0, 0);
+    border-radius: 9999px;
+    display: flex;
+    align-items: center;
+    color: #ffff;
+    gap: 10px;
+    font-weight: bold;
+    outline: none;
+    overflow: hidden;
+    font-size: 15px;
+    cursor: pointer;
+    margin: 0 auto;
+    margin-top: 200px;
+
+  }
+  
+  .icon {
+    width: 24px;
+    height: 24px;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .button:hover {
+    transform: scale(1.05);
+    border-color: #fff9;
+  }
+  
+  .button:hover .icon {
+    transform: translate(4px);
+  }
+  
+  .button:hover::before {
+    animation: shine 1.5s ease-out infinite;
+  }
+  
+  .button::before {
+    content: "";
+    position: absolute;
+    width: 100px;
+    height: 100%;
+    background-image: linear-gradient(
+      120deg,
+      rgba(255, 255, 255, 0) 30%,
+      rgba(255, 255, 255, 0.8),
+      rgba(255, 255, 255, 0) 70%
+    );
+    top: 0;
+    left: -100px;
+    opacity: 0.6;
+  }
+  
+  @keyframes shine {
+    0% {
+      left: -100px;
+    }
+  
+    60% {
+      left: 100%;
+    }
+  
+    to {
+      left: 100%;
+    }
+  }
+  
+  .shoebox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 350px;
+    margin-top: 40px;
+    margin-left: 100px;
+    scale: 1.5;;
+    outline: 2px solid #000000 ;
+  }
+  
+  .shoebox .main-image {
+    width: 100%;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+  }
+  
+  .shoebox .main-image img {
+    width: 100%;
+    display: block;
+  }
+  
+  .shoebox .thumbnails {
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+    padding-bottom: 10px;
+  }
+  
+  .shoebox .thumbnails img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border: 1px solid lightgray;
+    cursor: pointer;
+    transition: transform 0.2s;
+  }
+  
+  .shoebox .thumbnails img:hover {
+    transform: scale(1.1);
+    border-color: darkgrey;
+  }
+
+  .shoeSel{
+    text-align: center top;
+
+  }
+  
