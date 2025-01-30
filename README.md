@@ -21,7 +21,7 @@ The creator of this project, **Ibra Drame**, is not affiliated with Nike, Inc. i
 - **Fonts**: The fonts used in this project are either open-source or freely available for personal use.
 
 ### Contact
-If you have any questions or concerns regarding this project, please feel free to contact me at ibradramee123@gmail.com or ibraadrm21 on discord.
+If you have any questions or concerns regarding this project, please feel free to contact me at ibradramee123@gmail.com or ibraadrm21 on Discord.
 
 ---
 
