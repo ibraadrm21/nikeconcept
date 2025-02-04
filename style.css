@@ -100,7 +100,8 @@ body {
     display: block;
     margin: 0 auto;
     text-align: justify;
-    width: 70%;
+    width: 75%;
+    font-size: 18px;
 }
 
 .af1ttl{
@@ -204,14 +205,13 @@ img {
   animation-fill-mode: both;
 }
 
-.details{
+.details1{
   display: flex;
   align-items: center;
-  gap: 20px;
   justify-content: center;
 }
 
-.details p{
+.details1 p{
   margin: 0;
   font-size: 20px;
 }
@@ -223,6 +223,27 @@ img {
 
 .det1:hover{
   transform: scale(0.8);
+}
+
+.details2{
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  justify-content: center;
+}
+
+.details2 p{
+  margin: 0;
+  font-size: 20px;
+}
+
+.det2{
+  transform: scale(0.2);
+  transition: transform 0.3s ease;
+}
+
+.det2:hover{
+  transform: scale(0.25);
 }
 
 .pie{
