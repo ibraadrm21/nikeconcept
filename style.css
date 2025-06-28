@@ -2,6 +2,8 @@ body {
     color: #000000;
     font-family: Arial;
     background: #F5F5F5;
+    overflow-x: hidden;
+    filter: brightness(1.0);
 }
 
 .navbar {
@@ -14,7 +16,7 @@ body {
     background: #000000;
     box-shadow: 2px 3px #cccccc;
     border: 0.5px solid #cacaca; 
-    font-size: 30px;
+    font-size: 35px;
 }
 
 .navbar button {
@@ -52,19 +54,23 @@ body {
 
 .af1p {
     display: block;
-    margin: 0 auto;
-    filter: brightness(1.0);
-    transition: filter 0.3s ease, transform 0.3s ease;
-    margin-top: 150px; 
-    width: 150px;  
+    margin: 150px auto 0;
+    width: 30vw;
     height: auto;
-    transform: scale(5); 
+    filter: brightness(1.0);
+    transition: filter 0.3s ease, transform 0.4s ease;
+    animation: breathing 3s ease-in-out infinite;
+}
+
+@keyframes breathing {
+    0%   { transform: scale(1.5); }
+    50%  { transform: scale(1.55); }
+    100% { transform: scale(1.5); }
 }
 
 .af1p:hover {
-    transform: scale(5.8);
-    cursor: pointer;
-    filter: brightness(1.01);
+    animation-play-state: paused;
+    filter: brightness(1.03);
 }
 
 .buy {
@@ -132,26 +138,26 @@ body {
 
   }
   
-  .icon {
+.icon {
     width: 24px;
     height: 24px;
     transition: all 0.3s ease-in-out;
-  }
+}
   
-  .button:hover {
+.button:hover {
     transform: scale(1.05);
     border-color: #fff9;
-  }
+}
   
-  .button:hover .icon {
+.button:hover .icon {
     transform: translate(4px);
-  }
+}
   
-  .button:hover::before {
+.button:hover::before {
     animation: shine 1.5s ease-out infinite;
-  }
+}
   
-  .button::before {
+.button::before {
     content: "";
     position: absolute;
     width: 100px;
@@ -165,9 +171,9 @@ body {
     top: 0;
     left: -100px;
     opacity: 0.6;
-  }
+}
   
-  @keyframes shine {
+@keyframes shine {
     0% {
       left: -100px;
     }
@@ -179,10 +185,9 @@ body {
     to {
       left: 100%;
     }
-  }
-
-
-  @keyframes show {
+}
+  
+@keyframes show {
     from {
       opacity: 0;
       scale: 25%;
@@ -192,65 +197,102 @@ body {
       opacity: 1;
       scale: 100%;
     }
-  }
+}
   
 img {
-  view-timeline-axis: block;
-  view-timeline-name: --image;
+    view-timeline-axis: block;
+    view-timeline-name: --image;
 
-  animation-timeline: --image;
-  animation-name: show;
+    animation-timeline: --image;
+    animation-name: show;
 
-  animation-range: entry 25% cover 30%;
-  animation-fill-mode: both;
+    animation-range: entry 25% cover 30%;
+    animation-fill-mode: both;
 }
 
-.details1{
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 80px; 
 }
 
-.details1 p{
-  margin: 0;
-  font-size: 20px;
+.details1,
+.details2 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    max-width: 90vw;
+    width: 90vw;
+    margin: 0 auto;
+    box-sizing: border-box;
+    padding: 0 20px;
+}
+
+.details1 img,
+.details2 img {
+    width: 35%;
+    height: auto;
+    transform: scale(1);
+    flex-shrink: 0;
+}
+
+.details1 p,
+.details2 p {
+    max-width: 60%;
+    font-size: 20px;
+    margin: 0;
+    text-align: left;
+}
+
+.details2 {
+    flex-direction: row-reverse;
 }
 
 .det1{
-  transform: scale(0.7);
-  transition: transform 0.3s ease;
+    transform: scale(1);
+    transition: transform 0.3s ease;
 }
 
-.det1:hover{
-  transform: scale(0.8);
-}
-
-.details2{
-  display: flex;
-  align-items: center;
-  gap: 20px;
-  justify-content: center;
-}
-
-.details2 p{
-  margin: 0;
-  font-size: 20px;
+.det1:hover {
+    transform: scale(1.25);
+    animation: none;
 }
 
 .det2{
-  transform: scale(0.2);
-  transition: transform 0.3s ease;
+    transform: scale(1);
+    transition: transform 0.3s ease;
 }
 
 .det2:hover{
-  transform: scale(0.25);
+    transform: scale(1.25);
 }
 
 .pie{
-  max-width: 70%;
-  margin: auto;
-  display: flex;
+    max-width: 70%;
+    margin: auto;
+    display: flex;
 }
 
+@media (max-width: 768px) {
+    .details1,
+    .details2 {
+        flex-direction: column;
+        align-items: center;
+        width: 95vw;
+        padding: 0 10px;
+    }
 
-  
+    .details1 p,
+    .details2 p {
+        max-width: 100%;
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    .details1 img,
+    .details2 img {
+        width: 70%;
+    }
+}
